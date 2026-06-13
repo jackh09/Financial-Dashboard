@@ -8,7 +8,6 @@ This project is one of 3 passion projects intended to develop my full stack skil
 ## Essential Ideas
 As taught in my A-level Computer Science course, I will identify some essential ideas before doing anything else.
 This will help me visualise the program as a whole in my head, and this clearer picture will aid in developing each module of the program as I will be able to consider preconditions, inputs and outputs beforehand.
----
 This section will be split into 2 sections: one for the frontend and one for the backend.
 
 ### Frontend
