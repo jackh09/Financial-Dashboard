@@ -58,6 +58,21 @@ Next up I will look at the Financial Times. They have a more simplistic UI as co
 * Expanded data titles - no abbreviations, makes things easier to interpret
 
 ### yfinance
-yfinance is a python module that I will use to build my backend: fetching market data and ticker requests, along with searches and streaming live market data.
+yfinance is a python module that I will use to build my backend: fetching market data and ticker requests.
+yfinance.ticker - will allow me to fetch information about a singular stock. I will use the following for ticker:
+```python
+ticker.history(period="5d", interval="1d") # fetch the history of a ticker in the given time range
+ticker.info.get("longname") # get specific info about a ticker
+ticker.fast-info["previousClose"] # get simple information fast from a ticker
+```
+
+### Pandas
+Pandas is a fast, open-source data manipulation python module that I will use to build up my backend via formatting the yfinance data into a useable format for the frontend.
+```python
+closing_prices = df["close"] # slice a list to get values for one column
+df = df.reset_index() # convert yfinance data to sliceable, pandas-compatible data
+df["dailyReturn"] = df["close"].pct_change() # add another column of daily return based off changes in closing prices
+jsonData = df.to_json(orient="records", date_format="iso") # convert data to json for the frontend
+```
 
 I will leave research here, as I now have enough information to inform my success criteria.
