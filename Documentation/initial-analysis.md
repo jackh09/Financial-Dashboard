@@ -40,7 +40,7 @@ This program is, as stated a plethora of times before this point, fairly simple,
 I will now look at some designs in brief to help plan out my success criteria. I will carry this out in the analysis stage as I don't want to walk into a project with my success criteria underdeveloped.
 
 ### Yahoo Finance
-![Yahoo Finance Dashboard](/Assets/yahoo-finance-dashboard.png)
+![Yahoo Finance Dashboard](/Documentation/Assets/yahoo-finance-dashboard.png)
 Yahoo Finance is an established platform for viewing tickers, and I will take some notes from their design, using reference from the image above.
 * The page is dominated by the price graph, as it is the centerpiece for viewing a stock's history
 * Attention to detail - the price scale on the graph is anchored to the right to make viewing the price of a stock easier without having to drag my eyes across the screen to read something on the left
@@ -52,7 +52,7 @@ Yahoo Finance is an established platform for viewing tickers, and I will take so
 Overall, my design will be heavily based off Yahoo Finance as their UI is clean and easy to use. Some parts will obviously not be included for now, for example, news because I'm not a news outlet like Yahoo is.
 
 ### Financial Times
-![Financial Times Indice Viewer](/Assets/financial-times-indice-viewer.png)
+![Financial Times Indice Viewer](/Documentation/Assets/financial-times-indice-viewer.png)
 Next up I will look at the Financial Times. They have a more simplistic UI as compared to Yahoo Finance, which will suit my HTML/CSS skills better. It shares most of the same features as the Yahoo Finance Dashboard, however there are a couple of things that I would like to point out.
 * Colour scheme - clear green/red for gain/loss
 * Expanded data titles - no abbreviations, makes things easier to interpret
