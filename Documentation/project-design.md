@@ -68,3 +68,37 @@ meanDailyReturn = dailyReturns.mean()
 
 ### 6. Data packed into JSON file
 * All of this data now needs to be packed into a JSON file to send off to the frontend
+```python
+import json
+
+history_json = priceHistory.to_json(orient="records", date_format="iso") # Raw data to JSON string
+history_data = json.loads(history_json) # Turn string into a list
+
+JSONPackage = {
+    "metadata": {
+        "ticker": query,
+        "open": openingPrice,
+        "previousClose": prevClosingPrice,
+        "high": dailyHigh,
+        "low": dailyLow,
+        "volume": volume,
+        "marketCap": marketCap,
+        "meanDailyReturn": meanDailyReturn
+    },
+    "history": history_data
+}
+
+# Write to the JSON file
+with open("data.json", "w") as file:
+    json.dump(JSONPackage, file, indent=4)
+```
+
+### 7. Update every minute
+* Wait for one minute
+* Get new period
+* Refresh using a function
+```python
+import time
+time.sleep(60.5) # Give a bit of leeway so that it actually updates
+getStockData(query, newperiod)
+```
