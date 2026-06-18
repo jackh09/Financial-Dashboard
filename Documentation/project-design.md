@@ -48,7 +48,7 @@ priceHistory = priceHistory.reset_index() # Reset index for pandas + JSON
 * Opening price, previous closing price, daily high/low, volume, market cap
 * These can be fetched very easily using yfinance
 ```python
-extraInfoData = stockTicker.fast-info # Download the dataframe of all the data within a day
+extraInfoData = stockTicker.fast_info # Download the dataframe of all the data within a day
 # Assign each variable a singular datapoint
 openingPrice = extraInfoData.get("open")
 prevClosingPrice = extraInfoData.get("previousClose")
