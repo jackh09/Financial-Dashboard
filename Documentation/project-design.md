@@ -128,7 +128,6 @@ Firstly, I will make a website title. However, before doing so I will define som
 </html> <!-- Remove this as it is only to make this section of code technically correct -->
 ```
 
-
 Now to make the title; this can be easily done using headers:
 ```html
 <body>
@@ -137,15 +136,45 @@ Now to make the title; this can be easily done using headers:
 ```
 
 #### 2. Short description
-Now to add a short description just below to introduce the project
+Now to add a short description just below to introduce the project:
 ```html
 <body>
-<pre>
-    This website hosts my financial dashboard/stock viewer project.
-    It is one project of a trilogy that I aim to accomplish before the start of the 2026/27 academic year.
-    The project itself is a full stack project that fetches financial data and displays data about it in a visual way.
-    It uses modules such as yfinance, json and charts.js and has a polyglot codebase (Python, HTML, CSS, Javascript).
-    A search bar is below this text: search up a stock name (e.g. AMZN, TSLA, AAPL) to bring up the stock viewer page for your chosen search.
-</pre>
+    <p>
+        This website hosts my financial dashboard/stock viewer project.<br>
+        It is one project of a trilogy that I aim to accomplish before the start of the 2026/27 academic year.<br>
+        The project itself is a full stack project that fetches financial data and displays data about it in a visual way.<br>
+        It uses modules such as yfinance, json and charts.js and has a polyglot codebase (Python, HTML, CSS, Javascript).<br>
+        A search bar is below this text: search up a stock name (e.g. AMZN, TSLA, AAPL) to bring up the stock viewer page for your chosen search.
+    </p>
 </body>
 ```
+
+#### 3. Search bar
+Now I will implement a simple search bar to allow the user to search for and look at financial data for their chosen stock:
+```html
+<body>
+    <label for="Search">Search for a stock:</label><br>
+    <input type="text" id="Search" name="Search" placeholder="TSLA">
+    <input type="searchButton" value="Search">    
+</body>
+```
+
+#### 4. Input validation
+I can add input validation to my input to prevent erroneous data from being inputted. Furthermore, I have now
+put each new attribute on a new line as this one line has quite a few:
+```html
+<body>
+    <input
+        type="text"
+        id="Search"
+        name="Search"
+        placeholder="TSLA"
+        required
+        minlength="1"
+        maxlength="10"
+        pattern="[A-Za-z0-9\.\-=]+" <!-- Allows only letters, numbers, periods (.), hyphens (-) and equals (=) and the + means one or more of these -->
+        title="Please enter a valid ticker symbol (e.g., TSLA, BTC-USD, VOD.L)"> <!-- Appears if user types an erroneous character -->
+</body>
+```
+
+Now the main structure of the landing page is completete
