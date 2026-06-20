@@ -177,4 +177,5 @@ put each new attribute on a new line as this one line has quite a few:
 </body>
 ```
 
-Now the main structure of the landing page is completete
+Now the main structure of the landing page is completete. Below is a screenshot of the final product (index.html):
+![index.html screenshot](/Documentation/Assets/index-html-landing-page-screenshot-20-06-2026.png)
