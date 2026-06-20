@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <!--Add a title to the tab-->
+    <title>Financial Dashboard</title>
+</head>
+
+<body>
+    <!--Add a title for the page-->
+    <h1>Financial Dashboard / Stock Viewer</h1>
+
+    <!--Short introduction of the project-->
+    <p>
+        This website hosts my financial dashboard/stock viewer project.<br>
+        It is one project of a trilogy that I aim to accomplish before the start of the 2026/27 academic year.<br>
+        The project itself is a full stack project that fetches financial data and displays data about it in a visual
+        way.<br>
+        It uses modules such as yfinance, json and charts.js and has a polyglot codebase (Python, HTML, CSS,
+        Javascript).<br>
+        A search bar is below this text: search up a stock name (e.g. AMZN, TSLA, AAPL) to bring up the stock viewer
+        page for your chosen search.
+    </p>
+
+    <!--Search bar and related elements-->
+    <label for="Search">Search for a stock:</label><br>
+    <input type="text" id="Search" name="Search" placeholder="TSLA" required minlength="1" maxlength="10"
+        pattern="[A-Za-z0-9\.\-=]+" title="Please enter a valid ticker symbol (e.g., TSLA, BTC-USD, VOD.L)">
+    <!-- Appears if user types an erroneous character -->
+    <input type="submit" value="Search">
+</body>
+
+</html>
